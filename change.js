@@ -5,3 +5,6 @@ b = a - b;
 a = a - b; 
 console.log(a); 
 console.log(b);
+
+// деструктуризация, новый синтаксис ES6
+[a, b] = [b, a];
