@@ -1,7 +1,6 @@
 const arr = [10, 300, 18, 405, 45, 93, 57, 1, 4, 5];
 
-// начальное значение тоже нужно передавать
-const reduce = (array, callback) => {
+const reduce = (array, currItem, callback) => {
     if (typeof callback !== 'function') {
         return 0;
     }
