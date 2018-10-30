@@ -33,3 +33,9 @@ const assignDeep = (object1, object2) => { //
 }
 
 console.log(assignDeep(object1, object2));
+
+/*
+
+https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c
+
+*/

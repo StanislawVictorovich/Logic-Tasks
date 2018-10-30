@@ -22,3 +22,10 @@ const uniq = (array) => {
 
 console.log(uniq(array1));
 console.log(uniq(array2));
+
+/* 
+newIteration:continue newIteration;
+vэто не самая хорошая практика
+постарайся переписать код без этой штуки
+uniq.js
+*/

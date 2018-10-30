@@ -20,3 +20,12 @@ const isPalindrome = (array) => {
 
 console.log(isPalindrome(array1));
 console.log(isPalindrome(array2));
+
+/* 
+зачем там if else ?
+(i = 0; i < array.length; i++) {       
+     if (array[i] !== array[array.length - i - 1]) {
+                     return false;        }
+                    }return true;
+
+*/
