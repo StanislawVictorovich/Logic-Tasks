@@ -1,9 +1,9 @@
 let array = [90, 5, 6, -3, -56, 19, 48, 4, 9, 11, 45];
 
 /**
- * @description Represents sorting of two arrays
+ * @description Represents sorting array
  * @param {array} arr 
- * @returns new array
+ * @returns sorted array
  */
 const sort = (arr) => {
     for (let i = 0; i < arr.length; i++) {
