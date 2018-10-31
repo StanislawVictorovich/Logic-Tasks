@@ -7,17 +7,11 @@ const array2 = [9, 6, 7, 8, 79, 64, 5, 45, -5, 67];
  * @returns new array of unique numbers
  */
 const uniq = (array) => {
-    let resultArr = [];
-    newIteration:
+    let object = {};
     for (let i = 0; i < array.length; i++) {
-        for (let j = i + 1; j < array.length; j++){
-            if (array[i] === array[j]) {
-                continue newIteration;
-            }
-        }
-        resultArr.push(array[i]);
+        object[array[i]] = 0;
     }
-    return resultArr;
+    return Object.keys(object);
 }
 
 console.log(uniq(array1));
