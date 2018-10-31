@@ -3,25 +3,21 @@ const array2 = [6, 6, 7, 8, 9, 6, 5, 45, -5, 67];
 
 /**
  * @description Represents intersection of two arrays
- * @param {array} arr1 array number one
- * @param {array} arr2 array number two
+ * @param {Array} arr1 array number one
+ * @param {Array} arr2 array number two
+ * @returns {Array} array after intersection
  */
-const intersection = (arr1, arr2) => {
-    let arrResult = [];
-    if (arr1.arrLength > arr2.length) {
-        for (let i = 0; i < arr1.length; i++) {
-            for (let j = 0; j < arr2.length; j++) {
-                arr1[i] == arr2[j] && arrResult.push(arr1[i]);
-            }
+const intersection = (array1, array2) => {
+    object = new Object();
+    for (let i = 0, j = 0, r = 0; r < array1.length + array2.length; i++, j++, r++) {
+        if (i < array1.length) {
+            object[array1[i]] = true;
         }
-    } else {
-        for (let i = 0; i < arr2.length; i++) {
-            for (let j = 0; j < arr1.length; j++) {
-                arr1[i] == arr2[j] && arrResult.push(arr1[i]);
-            }
-        }     
+        if (j < array2.length) {
+            object[array2[j]] = true;
+        }
     }
-    return arrResult;
+    return Object.keys(object); 
 }
 
 console.log(intersection(array1, array2));
