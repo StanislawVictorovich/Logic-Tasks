@@ -1,17 +1,17 @@
 let object1 = {
-    a: 2,
-    b: 4,
-    c: {},
-    e: 456
+	a: 2,
+	b: 4,
+	c: {},
+	e: 456
 }
 
 let object2 = {
-    f: 34234,
-    g: {},
-    h: {},
-    i: 91,
-    j: 33,
-    k: {}
+	f: 34234,
+	g: {},
+	h: {},
+	i: 91,
+	j: 33,
+	k: {}
 }
 
 /**
@@ -21,21 +21,40 @@ let object2 = {
  * @param {Object} object2 second object
  * @returns new Object
  */
-const assignDeep = (object1, object2) => { // 
-    let resultObject = new Object;
-    for (let key in object1) { 
-        resultObject[key] = object1[key];
-    }
+const assignDeep = (object1, object2) => {
     for (let key in object2) {
-        resultObject[key] = object2[key];
+        object1[key] = assignDeep(object1[key], object2[key])
     }
-    return resultObject;
+    return object1;
 }
 
 console.log(assignDeep(object1, object2));
 
 /*
 
-https://we-are.bookmyshow.com/understanding-deep-and-shallow-copy-in-javascript-13438bad941c
+
+const aObj = {
+		b: 11,
+		c:  22
+	};
+
+const o1 = {
+	a: aObj,
+	d: [1, 2, 3]
+};
+
+const o2 = {
+	x: {
+		b: 1111,
+		c:  2211
+	},
+	y: [21, 31]
+}
+
+const res = assignDeep(o1, o2);
+
+res.a.b = false;
+console.log(aObj); 
 
 */
+
