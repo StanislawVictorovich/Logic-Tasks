@@ -1,5 +1,10 @@
 const str = '<<<<>>--><--<<--<<>>>--><<<<<';
 
+/**
+ * @description calculating amount of arrows in string
+ * @param {String} string 
+ * @returns counter
+ */
 const arrowsCount = (string) => {
     const template1 = '>>-->', template2 = '<--<<';
     let counter = 0;
