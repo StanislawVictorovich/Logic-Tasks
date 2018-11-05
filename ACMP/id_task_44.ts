@@ -1,19 +1,31 @@
-const str = '<<<<>>--><--<<--<<>>>--><<<<<';
+const inputString: string = '<<<<>>--><--<<--<<>>>--><<<<<';
 
 /**
- * @description calculating amount of arrows in string
+ * @description calculating amount of arrows by 
+ * templates in the input string
  * @param {String} string 
  * @returns counter
  */
-const arrowsCount = (string) => {
-    const template1 = '>>-->', template2 = '<--<<';
-    let counter = 0;
-    for (let i = 0; i < string.length; i++) {
-        if (string.substr(i, 5) === template1 || string.substr(i, 5) === template2) {
-            counter++;
-        }
+class ArrowsCount {
+  private s: string;
+  private template1: string;
+  private template2: string;
+  constructor (str: string) {
+    this.s = str;
+    this.template1 = '>>-->';
+    this.template2 = '<--<<';
+  }
+  public get calculate(): number { 
+    let counter:number = 0;
+    for (let i:number = 0; i < this.s.length; i++) {
+      if (this.s.substr(i, 5) == this.template1 || 
+      this.s.substr(i, 5) == this.template2) {
+        counter++;
+      }
     }
     return counter;
+  }
 }
 
-console.log(arrowsCount(str));
+const myObject = new ArrowsCount(inputString);
+console.log(myObject.calculate);
