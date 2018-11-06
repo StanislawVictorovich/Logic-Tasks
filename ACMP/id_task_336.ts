@@ -2,8 +2,6 @@ const sequencePushedButtons: number[] = new Array(1, 2, 2, 1, 1, 2, 1, 2, 1, 2);
 
 /**
  * @description calculating amount of floors in house 
- * @param {Array} array sequense of pushing buttons in lift
- * @returns amount of floors in house 
  */
 class Lift {
   private numberOfFloors: number;

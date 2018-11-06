@@ -2,9 +2,6 @@ const inputString: string = '<<<<>>--><--<<--<<>>>--><<<<<';
 
 /**
  * @description calculating amount of arrows by 
- * templates in the input string
- * @param {String} string 
- * @returns counter
  */
 class ArrowsCount {
   private s: string;

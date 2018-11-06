@@ -2,8 +2,6 @@ const number: number = 5;
 
 /**
  * @description adding all elements in sequense 0 ... N
- * @constructor inputs a number
- * @returns method calculate returns result of adding elements
  */
 class Summator {
     private readonly n: number = 0;

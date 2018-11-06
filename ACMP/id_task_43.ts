@@ -2,7 +2,6 @@ let list: number[] = new Array (0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 
 
  /**
   * @description calculating the biggest sequence of nulls in array
-  * @param {Array} array
   */
 class numberOfNulls {
     private nullCounter: number;
