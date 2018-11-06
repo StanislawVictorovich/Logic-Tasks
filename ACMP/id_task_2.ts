@@ -11,7 +11,8 @@ class Summator {
     get calculate(): number {
         let i: number = this.n, result: number = 0;
         while (i) {
-            result += i--;
+            i -= i;
+            result += i;
         }
         return result;
     }
