@@ -1,17 +1,18 @@
 let object1 = {
-	a: 2,
-	b: 4,
-	c: {},
-	e: 456
+  a: 2,
+  e: 4,
+  c: {},
+  b: 456,
+  t: {}
 }
 
 let object2 = {
-	f: 34234,
-	g: {},
-	h: {},
-	i: 91,
-	j: 33,
-	k: {}
+  f: 34234,
+  g: {},
+  h: {},
+  i: 91,
+  j: 33,
+  k: {}
 }
 
 /**
@@ -22,10 +23,8 @@ let object2 = {
  * @returns new Object
  */
 const assignDeep = (object1, object2) => {
-    for (let key in object2) {
-        object1[key] = assignDeep(object1[key], object2[key])
-    }
-    return object1;
+  let resultString = `${JSON.stringify(object1).slice(0, -1)},${JSON.stringify(object2).slice(1)}`;
+  return eval('(' + resultString + ')');
 }
 
 console.log(assignDeep(object1, object2));
