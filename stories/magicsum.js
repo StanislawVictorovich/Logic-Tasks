@@ -1,5 +1,11 @@
-/* 2. Simple, remove the spaces from the string, then return the resultant string.
-    */
-function removeSpacesFromString(str) {
-    return str.replace(/\s/g, '');
+/* 3 The magic sum of 3s is calculated on an array by summing up odd numbers which include the digit 3. Write a function magic_sum which accepts an array of integers and returns the sum.
+
+Example: [3, 12, 5, 8, 30, 13] results in 16 (3 + 13)
+
+If the sum cannot be calculated, 0 should be returned. */
+
+function magicSum(arr) {
+  return arr.reduce((result, currentItem) => {
+    return currentItem & 1 && String(currentItem).search('3') != -1 ? result += currentItem : result;
+  },0);
 }
